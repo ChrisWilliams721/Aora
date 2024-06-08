@@ -1,17 +1,20 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <View>
+        <Image source={require('./assets/thrifty-high-resolution-logo-transparent.png')}/>
+      </View>
       <View>
         <Text style={styles.create}>Create an Account</Text>
       </View>
       <View style={styles.signMessage}>
         <Text>Enter your email to sign up for this app</Text>
       </View>
-      <TextInput style={styles.input} placeholder='email@domain.com'/>
+      <TextInput style={styles.input} placeholder='email@domain.com'keyboardType='email-address'></TextInput>
       <View style={styles.signInBtn}>
       <Button title='Sign up with email' />
       </View>
